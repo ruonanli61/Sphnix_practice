@@ -48,7 +48,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # a list of builtin themes. 
 # This has been changed to the third part theme sphinx_rtd_theme. Need to install it first!
 
-import sphinx_rtd_theme
+# import sphinx-rtd-theme
 
 extensions = [
     'sphinx_rtd_theme',
