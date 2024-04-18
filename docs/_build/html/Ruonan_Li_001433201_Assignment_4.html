@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jupyter Notebook &mdash; Test 1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/nbsphinx-code-cells.css?v=2aa19091" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=29a6c3e3"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Defined_function" href="Function.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Test
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="Subpage/Subpages/subpage1.html">Steps for Sphinx onboarding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Subpage/Subpages/subpage3.html">Get started to use Sphnix</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Beginners</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="subpage2.html">More practice</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Automatic API Doc Generation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Class.html">Defined_class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Function.html">Defined_function</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Jupyter Notebook</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Test</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Jupyter Notebook</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Ruonan_Li_001433201_Assignment_4.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="Jupyter-Notebook">
+<h1>Jupyter Notebook<a class="headerlink" href="#Jupyter-Notebook" title="Link to this heading"></a></h1>
+<p>Ruonan Li, 001433201 Chemeng 788 Assignment 4</p>
+<p>#Part 2 Apply the filter to a random image</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre><span></span>import cv2
+from google.colab.patches import cv2_imshow
+import numpy as np
+</pre></div>
+</div>
+</div>
+<p>Read the image by using the cv2 command</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre><span></span>img = cv2.imread(&quot;1.jpg&quot;)
+</pre></div>
+</div>
+</div>
+<p>Present the original image.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre><span></span>cv2_imshow(img)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Ruonan_Li_001433201_Assignment_4_7_0.png" src="_images/Ruonan_Li_001433201_Assignment_4_7_0.png" />
+</div>
+</div>
+<p>Check the shape of the original image</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre><span></span>img.shape
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(1113, 690, 3)
+</pre></div></div>
+</div>
+<p>Define the costumer filter and apply to the original image. As shown in the figure below, the filter takes edges of the image.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre><span></span>def conv(image, kernel, mode=&#39;same&#39;):
+    if mode == &#39;fill&#39;:
+        h = kernel.shape[0] // 2
+        w = kernel.shape[1] // 2
+
+        image = np.pad(image, ((h, h), (w, w), (0, 0)), &#39;constant&#39;)
+    conv_b = _convolve(image[:, :, 0], kernel)
+    conv_g = _convolve(image[:, :, 1], kernel)
+    conv_r = _convolve(image[:, :, 2], kernel)
+    res = np.dstack([conv_b, conv_g, conv_r])
+    return res
+
+def _convolve(image, kernel):
+    h_kernel, w_kernel = kernel.shape
+    h_image, w_image = image.shape
+
+    res_h = h_image - h_kernel + 1
+    res_w = w_image - w_kernel + 1
+
+    res = np.zeros((res_h, res_w), np.uint8)
+    for i in range(res_h):
+        for j in range(res_w):
+            res[i, j] = normal(image[i:i + h_kernel, j:j + w_kernel], kernel)
+    return res
+
+def normal(image, kernel):
+    res = np.multiply(image, kernel).sum()
+    if res &gt; 255:
+      return 255
+    elif res &lt; 0:
+      return 0
+    else:
+      return res
+
+if __name__ == &#39;__main__&#39;:
+    image = img
+
+    kernel = np.array([
+        [-1, -1, -1],
+        [-1, 9, -1],
+        [-1, -1, -1]
+    ])
+    res = conv(image, kernel, &#39;fill&#39;)
+    cv2_imshow(res)
+    cv2.imwrite(&#39;output.jpg&#39;, res)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Ruonan_Li_001433201_Assignment_4_11_0.png" src="_images/Ruonan_Li_001433201_Assignment_4_11_0.png" />
+</div>
+</div>
+<p>#Part 3 Develop a classification model for CIFAR-10 dataset</p>
+<p>##a. Loading data</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre><span></span>import tensorflow as tf
+from tensorflow.keras import datasets, layers, models
+import matplotlib.pyplot as plt
+</pre></div>
+</div>
+</div>
+<p>###Download and prepare the CIFAR10 dataset</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre><span></span>(train_images, train_labels), (test_images, test_labels) = datasets.cifar10.load_data()
+
+# Normalize pixel values to be between 0 and 1
+train_images, test_images = train_images / 255.0, test_images / 255.0
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Downloading data from https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz
+170500096/170498071 [==============================] - 4s 0us/step
+</pre></div></div>
+</div>
+<p>###Varify the dataset To verify the dataset, the first 25 images of the training set and testing set have been ploted. Additionally, they are plotted to validate the results after removing the non-animal pictures.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre><span></span>class_names = [&#39;airplane&#39;, &#39;automobile&#39;, &#39;bird&#39;, &#39;cat&#39;, &#39;deer&#39;,
+               &#39;dog&#39;, &#39;frog&#39;, &#39;horse&#39;, &#39;ship&#39;, &#39;truck&#39;]
+
+plt.figure(figsize=(10,10))
+for i in range(25):
+    plt.subplot(5,5,i+1)
+    plt.xticks([])
+    plt.yticks([])
+    plt.grid(False)
+    plt.imshow(train_images[i], cmap=plt.cm.binary)
+    # The CIFAR labels happen to be arrays,
+    # which is why you need the extra index
+    plt.xlabel(class_names[train_labels[i][0]])
+plt.show()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Ruonan_Li_001433201_Assignment_4_18_0.png" src="_images/Ruonan_Li_001433201_Assignment_4_18_0.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre><span></span>plt.figure(figsize=(10,10))
+for i in range(25):
+    plt.subplot(5,5,i+1)
+    plt.xticks([])
+    plt.yticks([])
+    plt.grid(False)
+    plt.imshow(test_images[i], cmap=plt.cm.binary)
+    # The CIFAR labels happen to be arrays,
+    # which is why you need the extra index
+    plt.xlabel(class_names[test_labels[i][0]])
+plt.show()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Ruonan_Li_001433201_Assignment_4_19_0.png" src="_images/Ruonan_Li_001433201_Assignment_4_19_0.png" />
+</div>
+</div>
+<p>##b. Drop the non-animal items</p>
+<p>###Preparation</p>
+<p>Calcualte the number of picutres in the training set and testing set.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre><span></span>print(len(train_images))
+print(len(test_images))
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+50000
+10000
+</pre></div></div>
+</div>
+<p>Count the number of non-animal pictures in the training set and testing set to ensure the correct number of images are removed. 20000 pichtures muste be removed from the training set, while 4000 pictures should be removed.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre><span></span>k = 0
+l = 0
+for i in train_labels:
+  if i == 0 or i == 1 or i == 8 or i == 9:
+    k = k+1
+for i in test_labels:
+  if i == 0 or i == 1 or i == 8 or i == 9:
+    l = l+1
+print(k)
+print(l)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+20000
+4000
+</pre></div></div>
+</div>
+<p>###Drop the data</p>
+<p>Generate the filter arrays and then use the filter arrys to remove the non-animal pictures.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre><span></span>filter_arr_train = []
+filter_arr_test = []
+for i in train_labels:
+  if i == 0 or i == 1 or i == 8 or i == 9:
+    filter_arr_train.append(False)
+  else:
+    filter_arr_train.append(True)
+newtrain_images = train_images[filter_arr_train]
+newtrain_labels = train_labels[filter_arr_train]
+
+for i in test_labels:
+  if i == 0 or i == 1 or i == 8 or i == 9:
+    filter_arr_test.append(False)
+  else:
+    filter_arr_test.append(True)
+newtest_images = test_images[filter_arr_test]
+newtest_labels = test_labels[filter_arr_test]
+</pre></div>
+</div>
+</div>
+<p>###Validation</p>
+<p>Calculate the new size of the training set and testing set. Since as shown in the equations below, the length of the new sets matches with the expected values, the data remove is successfule.</p>
+<p>Training set: 50000(original size)-20000(removal) = 30000</p>
+<p>Testing set: 10000(original size)-4000(removal) = 6000</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre><span></span>print(len(newtrain_images))
+print(len(newtest_images))
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+30000
+6000
+</pre></div></div>
+</div>
+<p>Plot the first 25 images and their labels for both the trainig and testing set. Compared the results with the original data set to ensure:</p>
+<ol class="arabic simple">
+<li><p>Non-animal pictures picutres are removed</p></li>
+<li><p>Images and labels match to each others</p></li>
+</ol>
+<p>As shown in the two figures below, there isn’t non-animal picutres. Additionally, the images and labels are correctly related; therefore, the data removal is successful.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre><span></span>plt.figure(figsize=(10,10))
+for i in range(25):
+    plt.subplot(5,5,i+1)
+    plt.xticks([])
+    plt.yticks([])
+    plt.grid(False)
+    plt.imshow(newtrain_images[i], cmap=plt.cm.binary)
+    # The CIFAR labels happen to be arrays,
+    # which is why you need the extra index
+    plt.xlabel(class_names[newtrain_labels[i][0]])
+plt.show()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Ruonan_Li_001433201_Assignment_4_32_0.png" src="_images/Ruonan_Li_001433201_Assignment_4_32_0.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre><span></span>plt.figure(figsize=(10,10))
+for i in range(25):
+    plt.subplot(5,5,i+1)
+    plt.xticks([])
+    plt.yticks([])
+    plt.grid(False)
+    plt.imshow(newtest_images[i], cmap=plt.cm.binary)
+    # The CIFAR labels happen to be arrays,
+    # which is why you need the extra index
+    plt.xlabel(class_names[newtest_labels[i][0]])
+plt.show()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Ruonan_Li_001433201_Assignment_4_33_0.png" src="_images/Ruonan_Li_001433201_Assignment_4_33_0.png" />
+</div>
+</div>
+<p>##c.Turn on GPU in colab</p>
+<p>GPU in colab has been turned on and tested by the following codes</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre><span></span>%tensorflow_version 2.x
+import tensorflow as tf
+device_name = tf.test.gpu_device_name()
+if device_name != &#39;/device:GPU:0&#39;:
+  raise SystemError(&#39;GPU device not found&#39;)
+print(&#39;Found GPU at: {}&#39;.format(device_name))
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Found GPU at: /device:GPU:0
+</pre></div></div>
+</div>
+<p>##d.CNN network design and elaboration</p>
+<p>To effectively design the CNN network in a short time, in this assignmet, the example that shown in the class will be used as the base to construct the CNN network.</p>
+<p>###Design of the CNN</p>
+<p>To find the best design of the convolution and pooling layer, the following combinations haved been tested manually.</p>
+<p>Convolution layer: 1. Number of convolution layer: 3 2. The number of filters for each layer: [512,256,128,64,32] 3. Kernel size: 3x3</p>
+<p>This is fixed because a lot of CNN network developed for the dataset use a kernel size of 3x3 4. Stride: 1</p>
+<p>This is fixed to get maximum information from each convolution layer and decrease the testing iterations 5. Padding: same</p>
+<p>This is fixed to decrease the testing iterations and extract sufficient information. 6. Activation function: ‘relu’</p>
+<p>This is fixed since 1. the activation function has a high accuracy 2. decrease the testing iterations</p>
+<p>Pooling layer:</p>
+<p>Both the average and max pooling layer with size of 2*2 and a stride of 2 have been tested. The size and stirde are fixed to avoid a large amount of testing iterations.</p>
+<p>Fully connected layer: 1. Number of hidden layers: 1, 2, 3 2. Number of neurons of each hidden layer:</p>
+<p>[256,128,64,32,16] (one hidden layer);</p>
+<p>1st: [256,128,64,32], 2nd: [128,64,32,16] (two hidden layers);</p>
+<p>1st: [256,128,64], 2nd: [128,64,32], 3rd: [64,32,16] (three hidden layers)</p>
+<p>These combinations are selected to ensure the hidden layers follow a tunnel shape. 3. Activation function: ‘relu’ for all hiden layer, ‘softmax’ for the last layer 4. Optimizer: ‘adam’</p>
+<p>This is selected since it has an high performance and also to decrease the testing iterations. 5. Loss function: ‘SparseCategoricalCrossentropy’</p>
+<p>This is selected since the problem is a classification problem with interger outputs.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre><span></span>from keras.layers import Dense, Activation, Flatten, Dropout, BatchNormalization
+from keras.layers import Conv2D, MaxPooling2D
+from keras.datasets import cifar10
+from keras import regularizers, optimizers
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre><span></span>x1 = [128,64,32]
+x2 = [512,256,128,64,32]
+testrec = []
+trainrec = []
+for i in x1:
+  for j in x2:
+    for k in x2:
+      model = models.Sequential()
+      model.add(layers.Conv2D(i, (3, 3), activation=&#39;relu&#39;, input_shape=(32, 32, 3), padding=&#39;same&#39;))
+      model.add(layers.AveragePooling2D((2, 2)))
+      model.add(layers.Conv2D(j, (3, 3), activation=&#39;relu&#39;))
+      model.add(layers.AveragePooling2D((2, 2)))
+      model.add(layers.Conv2D(k, (3, 3), activation=&#39;relu&#39;))
+      model.add(layers.AveragePooling2D((2, 2)))
+      model.add(layers.Flatten())
+      model.add(layers.Dense(256, activation=&#39;relu&#39;))
+      model.add(layers.Dense(64, activation=&#39;relu&#39;))
+      model.add(layers.Dense(32, activation=&#39;relu&#39;))
+      model.add(layers.Dense(10,activation=&#39;softmax&#39;))
+      model.compile(optimizer=&#39;adam&#39;,
+                loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
+                metrics=[&#39;accuracy&#39;])
+      epochs=20
+      history = model.fit(newtrain_images, newtrain_labels, epochs=epochs,
+                      validation_split=0.2, verbose=0)
+      train_loss, train_acc = model.evaluate(newtrain_images, newtrain_labels, verbose=1)
+      test_loss, test_acc = model.evaluate(newtest_images, newtest_labels, verbose=1)
+      testrec.append(test_acc)
+      trainrec.append(train_acc)
+print(&#39;\nTest loss:&#39;, testrec)
+print(&#39;\nTest accuracy:&#39;, trainrec)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+938/938 [==============================] - 3s 3ms/step - loss: 0.4052 - accuracy: 0.9117
+188/188 [==============================] - 1s 3ms/step - loss: 1.6895 - accuracy: 0.6742
+938/938 [==============================] - 3s 3ms/step - loss: 0.4743 - accuracy: 0.8744
+188/188 [==============================] - 1s 3ms/step - loss: 1.5509 - accuracy: 0.6627
+938/938 [==============================] - 3s 3ms/step - loss: 0.4858 - accuracy: 0.8372
+188/188 [==============================] - 1s 3ms/step - loss: 1.1309 - accuracy: 0.6720
+938/938 [==============================] - 2s 3ms/step - loss: 0.5959 - accuracy: 0.7889
+188/188 [==============================] - 1s 3ms/step - loss: 1.0247 - accuracy: 0.6688
+938/938 [==============================] - 2s 3ms/step - loss: 0.7164 - accuracy: 0.7390
+188/188 [==============================] - 0s 3ms/step - loss: 0.9953 - accuracy: 0.6513
+938/938 [==============================] - 3s 3ms/step - loss: 0.4551 - accuracy: 0.8967
+188/188 [==============================] - 1s 3ms/step - loss: 1.7491 - accuracy: 0.6697
+938/938 [==============================] - 2s 2ms/step - loss: 0.4119 - accuracy: 0.9032
+188/188 [==============================] - 0s 2ms/step - loss: 1.5493 - accuracy: 0.6810
+938/938 [==============================] - 2s 2ms/step - loss: 0.4341 - accuracy: 0.8617
+188/188 [==============================] - 0s 2ms/step - loss: 1.1504 - accuracy: 0.6783
+938/938 [==============================] - 2s 2ms/step - loss: 0.4516 - accuracy: 0.8562
+188/188 [==============================] - 0s 2ms/step - loss: 1.0870 - accuracy: 0.6813
+938/938 [==============================] - 2s 2ms/step - loss: 0.6272 - accuracy: 0.7733
+188/188 [==============================] - 0s 2ms/step - loss: 1.0153 - accuracy: 0.6590
+938/938 [==============================] - 2s 2ms/step - loss: 0.4033 - accuracy: 0.9078
+188/188 [==============================] - 0s 2ms/step - loss: 1.6868 - accuracy: 0.6765
+938/938 [==============================] - 2s 2ms/step - loss: 0.3808 - accuracy: 0.9078
+188/188 [==============================] - 0s 2ms/step - loss: 1.4692 - accuracy: 0.6802
+938/938 [==============================] - 2s 2ms/step - loss: 0.4267 - accuracy: 0.8796
+188/188 [==============================] - 0s 2ms/step - loss: 1.3906 - accuracy: 0.6660
+938/938 [==============================] - 2s 2ms/step - loss: 0.5317 - accuracy: 0.8210
+188/188 [==============================] - 0s 2ms/step - loss: 1.1378 - accuracy: 0.6498
+938/938 [==============================] - 2s 2ms/step - loss: 0.6621 - accuracy: 0.7616
+188/188 [==============================] - 0s 2ms/step - loss: 1.0300 - accuracy: 0.6550
+938/938 [==============================] - 2s 2ms/step - loss: 0.4173 - accuracy: 0.9069
+188/188 [==============================] - 0s 2ms/step - loss: 1.6738 - accuracy: 0.6803
+938/938 [==============================] - 2s 2ms/step - loss: 0.4291 - accuracy: 0.8743
+188/188 [==============================] - 0s 2ms/step - loss: 1.3286 - accuracy: 0.6578
+938/938 [==============================] - 2s 2ms/step - loss: 0.5773 - accuracy: 0.8003
+188/188 [==============================] - 0s 2ms/step - loss: 1.0421 - accuracy: 0.6503
+938/938 [==============================] - 2s 2ms/step - loss: 0.5596 - accuracy: 0.8060
+188/188 [==============================] - 0s 2ms/step - loss: 1.0663 - accuracy: 0.6565
+938/938 [==============================] - 2s 2ms/step - loss: 0.5871 - accuracy: 0.7937
+188/188 [==============================] - 0s 2ms/step - loss: 1.0198 - accuracy: 0.6577
+938/938 [==============================] - 2s 2ms/step - loss: 0.4306 - accuracy: 0.8947
+188/188 [==============================] - 0s 2ms/step - loss: 1.7304 - accuracy: 0.6410
+938/938 [==============================] - 2s 2ms/step - loss: 0.4917 - accuracy: 0.8532
+188/188 [==============================] - 0s 3ms/step - loss: 1.4316 - accuracy: 0.6307
+938/938 [==============================] - 2s 2ms/step - loss: 0.6172 - accuracy: 0.8026
+188/188 [==============================] - 0s 2ms/step - loss: 1.4350 - accuracy: 0.5917
+938/938 [==============================] - 2s 2ms/step - loss: 0.6910 - accuracy: 0.7565
+188/188 [==============================] - 0s 2ms/step - loss: 1.2091 - accuracy: 0.6110
+938/938 [==============================] - 2s 2ms/step - loss: 0.6450 - accuracy: 0.7709
+188/188 [==============================] - 0s 2ms/step - loss: 1.0600 - accuracy: 0.6318
+938/938 [==============================] - 3s 3ms/step - loss: 0.3344 - accuracy: 0.9282
+188/188 [==============================] - 1s 3ms/step - loss: 1.4539 - accuracy: 0.7057
+938/938 [==============================] - 2s 3ms/step - loss: 0.3556 - accuracy: 0.9115
+188/188 [==============================] - 0s 3ms/step - loss: 1.4590 - accuracy: 0.6763
+938/938 [==============================] - 2s 3ms/step - loss: 0.4736 - accuracy: 0.8455
+188/188 [==============================] - 0s 2ms/step - loss: 1.0685 - accuracy: 0.6860
+938/938 [==============================] - 2s 2ms/step - loss: 0.4844 - accuracy: 0.8412
+188/188 [==============================] - 0s 2ms/step - loss: 1.0730 - accuracy: 0.6890
+938/938 [==============================] - 2s 2ms/step - loss: 0.5563 - accuracy: 0.8046
+188/188 [==============================] - 0s 2ms/step - loss: 0.9411 - accuracy: 0.6867
+938/938 [==============================] - 2s 2ms/step - loss: 0.4311 - accuracy: 0.8946
+188/188 [==============================] - 0s 2ms/step - loss: 1.6282 - accuracy: 0.6833
+938/938 [==============================] - 2s 2ms/step - loss: 0.3623 - accuracy: 0.9172
+188/188 [==============================] - 0s 2ms/step - loss: 1.5363 - accuracy: 0.6883
+938/938 [==============================] - 2s 2ms/step - loss: 0.4308 - accuracy: 0.8621
+188/188 [==============================] - 0s 2ms/step - loss: 1.0195 - accuracy: 0.7010
+938/938 [==============================] - 2s 2ms/step - loss: 0.5040 - accuracy: 0.8302
+188/188 [==============================] - 0s 2ms/step - loss: 1.0148 - accuracy: 0.6792
+938/938 [==============================] - 2s 2ms/step - loss: 0.6026 - accuracy: 0.7819
+188/188 [==============================] - 0s 2ms/step - loss: 0.9260 - accuracy: 0.6770
+938/938 [==============================] - 2s 2ms/step - loss: 0.4069 - accuracy: 0.8992
+188/188 [==============================] - 0s 2ms/step - loss: 1.5640 - accuracy: 0.6720
+938/938 [==============================] - 2s 2ms/step - loss: 0.3882 - accuracy: 0.9039
+188/188 [==============================] - 0s 2ms/step - loss: 1.5011 - accuracy: 0.6697
+938/938 [==============================] - 2s 2ms/step - loss: 0.3972 - accuracy: 0.8878
+188/188 [==============================] - 0s 2ms/step - loss: 1.2694 - accuracy: 0.6802
+938/938 [==============================] - 2s 2ms/step - loss: 0.5500 - accuracy: 0.8142
+188/188 [==============================] - 0s 2ms/step - loss: 1.0905 - accuracy: 0.6670
+938/938 [==============================] - 2s 2ms/step - loss: 0.6695 - accuracy: 0.7555
+188/188 [==============================] - 0s 2ms/step - loss: 0.9338 - accuracy: 0.6782
+938/938 [==============================] - 2s 2ms/step - loss: 0.4132 - accuracy: 0.9008
+188/188 [==============================] - 0s 2ms/step - loss: 1.5961 - accuracy: 0.6678
+938/938 [==============================] - 2s 2ms/step - loss: 0.4110 - accuracy: 0.8945
+188/188 [==============================] - 0s 2ms/step - loss: 1.4837 - accuracy: 0.6840
+938/938 [==============================] - 2s 2ms/step - loss: 0.4132 - accuracy: 0.8741
+188/188 [==============================] - 0s 2ms/step - loss: 1.2174 - accuracy: 0.6665
+938/938 [==============================] - 2s 2ms/step - loss: 0.6000 - accuracy: 0.7883
+188/188 [==============================] - 0s 2ms/step - loss: 1.0511 - accuracy: 0.6648
+938/938 [==============================] - 2s 2ms/step - loss: 0.5590 - accuracy: 0.8010
+188/188 [==============================] - 0s 2ms/step - loss: 0.9933 - accuracy: 0.6653
+938/938 [==============================] - 2s 2ms/step - loss: 0.3822 - accuracy: 0.8980
+188/188 [==============================] - 0s 2ms/step - loss: 1.3830 - accuracy: 0.6598
+938/938 [==============================] - 2s 2ms/step - loss: 0.4562 - accuracy: 0.8693
+188/188 [==============================] - 0s 2ms/step - loss: 1.4185 - accuracy: 0.6242
+938/938 [==============================] - 2s 2ms/step - loss: 0.4841 - accuracy: 0.8436
+188/188 [==============================] - 0s 2ms/step - loss: 1.2017 - accuracy: 0.6555
+938/938 [==============================] - 2s 2ms/step - loss: 0.5570 - accuracy: 0.8101
+188/188 [==============================] - 0s 2ms/step - loss: 1.1253 - accuracy: 0.6503
+938/938 [==============================] - 2s 2ms/step - loss: 0.7549 - accuracy: 0.7222
+188/188 [==============================] - 0s 2ms/step - loss: 1.0479 - accuracy: 0.6228
+938/938 [==============================] - 3s 3ms/step - loss: 0.3583 - accuracy: 0.9291
+188/188 [==============================] - 1s 3ms/step - loss: 1.6639 - accuracy: 0.6920
+938/938 [==============================] - 2s 3ms/step - loss: 0.4005 - accuracy: 0.8986
+188/188 [==============================] - 0s 2ms/step - loss: 1.4510 - accuracy: 0.6797
+938/938 [==============================] - 2s 2ms/step - loss: 0.4158 - accuracy: 0.8671
+188/188 [==============================] - 0s 2ms/step - loss: 1.1456 - accuracy: 0.6827
+938/938 [==============================] - 2s 2ms/step - loss: 0.3953 - accuracy: 0.8801
+188/188 [==============================] - 0s 2ms/step - loss: 1.0912 - accuracy: 0.6953
+938/938 [==============================] - 2s 2ms/step - loss: 0.5211 - accuracy: 0.8214
+188/188 [==============================] - 0s 2ms/step - loss: 1.0364 - accuracy: 0.6833
+938/938 [==============================] - 2s 2ms/step - loss: 0.3675 - accuracy: 0.9253
+188/188 [==============================] - 0s 2ms/step - loss: 1.6479 - accuracy: 0.6928
+938/938 [==============================] - 2s 2ms/step - loss: 0.3651 - accuracy: 0.9064
+188/188 [==============================] - 0s 2ms/step - loss: 1.3460 - accuracy: 0.6910
+938/938 [==============================] - 2s 2ms/step - loss: 0.3935 - accuracy: 0.8822
+188/188 [==============================] - 0s 2ms/step - loss: 1.1458 - accuracy: 0.6905
+938/938 [==============================] - 2s 2ms/step - loss: 0.4178 - accuracy: 0.8728
+188/188 [==============================] - 0s 2ms/step - loss: 1.1398 - accuracy: 0.6853
+938/938 [==============================] - 2s 2ms/step - loss: 0.6313 - accuracy: 0.7724
+188/188 [==============================] - 0s 2ms/step - loss: 0.9436 - accuracy: 0.6812
+938/938 [==============================] - 2s 2ms/step - loss: 0.3690 - accuracy: 0.9220
+188/188 [==============================] - 0s 2ms/step - loss: 1.6854 - accuracy: 0.6795
+938/938 [==============================] - 2s 2ms/step - loss: 0.4098 - accuracy: 0.8981
+188/188 [==============================] - 0s 2ms/step - loss: 1.5588 - accuracy: 0.6740
+938/938 [==============================] - 2s 2ms/step - loss: 0.4811 - accuracy: 0.8536
+188/188 [==============================] - 0s 2ms/step - loss: 1.2986 - accuracy: 0.6717
+938/938 [==============================] - 2s 2ms/step - loss: 0.6266 - accuracy: 0.7750
+188/188 [==============================] - 0s 2ms/step - loss: 0.9701 - accuracy: 0.6648
+938/938 [==============================] - 2s 2ms/step - loss: 0.6240 - accuracy: 0.7729
+188/188 [==============================] - 0s 2ms/step - loss: 0.9399 - accuracy: 0.6842
+938/938 [==============================] - 2s 2ms/step - loss: 0.4094 - accuracy: 0.9006
+188/188 [==============================] - 0s 2ms/step - loss: 1.6053 - accuracy: 0.6630
+938/938 [==============================] - 2s 2ms/step - loss: 0.4627 - accuracy: 0.8678
+188/188 [==============================] - 0s 2ms/step - loss: 1.4829 - accuracy: 0.6520
+938/938 [==============================] - 2s 2ms/step - loss: 0.4529 - accuracy: 0.8567
+188/188 [==============================] - 0s 2ms/step - loss: 1.2122 - accuracy: 0.6787
+938/938 [==============================] - 2s 2ms/step - loss: 0.5482 - accuracy: 0.8150
+188/188 [==============================] - 0s 2ms/step - loss: 1.1143 - accuracy: 0.6595
+938/938 [==============================] - 2s 2ms/step - loss: 0.6150 - accuracy: 0.7846
+188/188 [==============================] - 0s 2ms/step - loss: 0.9894 - accuracy: 0.6543
+938/938 [==============================] - 2s 2ms/step - loss: 0.3971 - accuracy: 0.9055
+188/188 [==============================] - 0s 2ms/step - loss: 1.6121 - accuracy: 0.6768
+938/938 [==============================] - 2s 2ms/step - loss: 0.4432 - accuracy: 0.8692
+188/188 [==============================] - 0s 2ms/step - loss: 1.3180 - accuracy: 0.6528
+938/938 [==============================] - 2s 2ms/step - loss: 0.4958 - accuracy: 0.8437
+188/188 [==============================] - 0s 2ms/step - loss: 1.2660 - accuracy: 0.6487
+938/938 [==============================] - 2s 2ms/step - loss: 0.5824 - accuracy: 0.8002
+188/188 [==============================] - 0s 2ms/step - loss: 1.1724 - accuracy: 0.6293
+938/938 [==============================] - 2s 2ms/step - loss: 0.6955 - accuracy: 0.7530
+188/188 [==============================] - 0s 2ms/step - loss: 1.1326 - accuracy: 0.6185
+
+Test loss: [0.6741666793823242, 0.6626666784286499, 0.671999990940094, 0.668833315372467, 0.6513333320617676, 0.6696666479110718, 0.6809999942779541, 0.6783333420753479, 0.6813333630561829, 0.6589999794960022, 0.6765000224113464, 0.6801666617393494, 0.6660000085830688, 0.6498333215713501, 0.6549999713897705, 0.6803333163261414, 0.6578333377838135, 0.6503333449363708, 0.656499981880188, 0.6576666831970215, 0.640999972820282, 0.6306666731834412, 0.5916666388511658, 0.6110000014305115, 0.6318333148956299, 0.7056666612625122, 0.6763333082199097, 0.6859999895095825, 0.6890000104904175, 0.6866666674613953, 0.6833333373069763, 0.6883333325386047, 0.7009999752044678, 0.6791666746139526, 0.6769999861717224, 0.671999990940094, 0.6696666479110718, 0.6801666617393494, 0.6669999957084656, 0.6781666874885559, 0.6678333282470703, 0.6840000152587891, 0.6664999723434448, 0.6648333072662354, 0.6653333306312561, 0.6598333120346069, 0.6241666674613953, 0.6554999947547913, 0.6503333449363708, 0.6228333115577698, 0.6919999718666077, 0.6796666383743286, 0.6826666593551636, 0.6953333616256714, 0.6833333373069763, 0.6928333044052124, 0.6909999847412109, 0.690500020980835, 0.6853333115577698, 0.6811666488647461, 0.6794999837875366, 0.6740000247955322, 0.67166668176651, 0.6648333072662354, 0.684166669845581, 0.6629999876022339, 0.6520000100135803, 0.6786666512489319, 0.659500002861023, 0.6543333530426025, 0.6768333315849304, 0.6528333425521851, 0.6486666798591614, 0.6293333172798157, 0.6184999942779541]
+
+Test accuracy: [0.9117000102996826, 0.8744000196456909, 0.8371666669845581, 0.7889333367347717, 0.7390000224113464, 0.8967000246047974, 0.903166651725769, 0.8616999983787537, 0.8561999797821045, 0.7732999920845032, 0.9078333377838135, 0.9078333377838135, 0.8795666694641113, 0.8210333585739136, 0.7616333365440369, 0.9069333076477051, 0.8743333220481873, 0.8003000020980835, 0.8059666752815247, 0.793666660785675, 0.8946999907493591, 0.8532333374023438, 0.8026333451271057, 0.7565333247184753, 0.7708666920661926, 0.9282000064849854, 0.911466658115387, 0.8455333113670349, 0.8412333130836487, 0.8045666813850403, 0.894599974155426, 0.9172000288963318, 0.8621333241462708, 0.8302333354949951, 0.7818666696548462, 0.8991666436195374, 0.9039333462715149, 0.8877666592597961, 0.8141666650772095, 0.7555333375930786, 0.9007666707038879, 0.8944666385650635, 0.8741333484649658, 0.7882999777793884, 0.8010333180427551, 0.8979666829109192, 0.8693000078201294, 0.8435666561126709, 0.8101333379745483, 0.7221999764442444, 0.9291333556175232, 0.8985666632652283, 0.8671000003814697, 0.8801000118255615, 0.8214333057403564, 0.9253000020980835, 0.9064000248908997, 0.8822333216667175, 0.8728333115577698, 0.7723666429519653, 0.9220333099365234, 0.8981333374977112, 0.8536333441734314, 0.7749666571617126, 0.7728999853134155, 0.900600016117096, 0.8678333163261414, 0.8567000031471252, 0.8149999976158142, 0.784600019454956, 0.9054666757583618, 0.8691999912261963, 0.8436999917030334, 0.8002333045005798, 0.753000020980835]
+</pre></div></div>
+</div>
+<p>By performing the search above, it was found that when the CNN network has the following structure, accuracy of the training set and testing set reach the highest accuracy of 94.0% and 71.2%. Therefore, the structure of the CNN network has been set as the following.</p>
+<p>Convolution layer sizes: (64,256,512)</p>
+<p>Fully connected layer size: 256</p>
+<p>However, the accuracy of the testing set is still low; therefore, after reading other works on the CNN network for the CIFAR-10 dataset, the following changes have been performed to increase the prediction accuracy： 1. Duplicate the convolution layers 2. Adding Batch normalization layers to each convolution layer. 3. Number of epoch: 50</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre><span></span>model = models.Sequential()
+model.add(layers.Conv2D(64, (3,3), activation=&#39;relu&#39;, padding=&#39;same&#39;, input_shape=(32, 32, 3)))
+model.add(layers.BatchNormalization())
+model.add(layers.Conv2D(64, (3,3), activation=&#39;relu&#39;, padding=&#39;same&#39;))
+model.add(layers.BatchNormalization())
+model.add(layers.MaxPooling2D(pool_size=(2,2)))
+
+model.add(layers.Conv2D(256, (3,3), activation=&#39;relu&#39;, padding=&#39;same&#39;))
+model.add(layers.BatchNormalization())
+model.add(layers.Conv2D(256, (3,3), activation=&#39;relu&#39;, padding=&#39;same&#39;))
+model.add(layers.BatchNormalization())
+model.add(layers.MaxPooling2D(pool_size=(2,2)))
+
+model.add(layers.Conv2D(512, (3,3), padding=&#39;same&#39;))
+model.add(layers.BatchNormalization())
+model.add(layers.Conv2D(512, (3,3), padding=&#39;same&#39;))
+model.add(layers.BatchNormalization())
+model.add(layers.MaxPooling2D(pool_size=(2,2)))
+model.add(layers.Flatten())
+model.add(layers.Dense(256, activation=&#39;relu&#39;))
+model.add(layers.Dense(10,activation=&#39;softmax&#39;))
+model.compile(optimizer=&#39;adam&#39;,
+                loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
+                metrics=[&#39;accuracy&#39;])
+epochs=50
+history = model.fit(newtrain_images, newtrain_labels, epochs=epochs,
+                      validation_split=0.2)
+test_loss, test_acc = model.evaluate(newtest_images, newtest_labels, verbose=1)
+print(&#39;\nTest loss:&#39;, test_loss)
+print(&#39;\nTest accuracy:&#39;, test_acc)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Epoch 1/50
+750/750 [==============================] - 15s 19ms/step - loss: 2.2751 - accuracy: 0.3678 - val_loss: 1.5638 - val_accuracy: 0.4392
+Epoch 2/50
+750/750 [==============================] - 14s 18ms/step - loss: 1.0825 - accuracy: 0.5877 - val_loss: 1.3844 - val_accuracy: 0.4923
+Epoch 3/50
+750/750 [==============================] - 14s 18ms/step - loss: 0.8697 - accuracy: 0.6758 - val_loss: 1.0900 - val_accuracy: 0.5780
+Epoch 4/50
+750/750 [==============================] - 14s 18ms/step - loss: 0.7334 - accuracy: 0.7336 - val_loss: 1.2120 - val_accuracy: 0.5932
+Epoch 5/50
+750/750 [==============================] - 14s 18ms/step - loss: 0.6084 - accuracy: 0.7834 - val_loss: 0.7400 - val_accuracy: 0.7390
+Epoch 6/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.4921 - accuracy: 0.8260 - val_loss: 0.7795 - val_accuracy: 0.7337
+Epoch 7/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.3891 - accuracy: 0.8631 - val_loss: 1.0682 - val_accuracy: 0.6492
+Epoch 8/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.3154 - accuracy: 0.8915 - val_loss: 0.8382 - val_accuracy: 0.7370
+Epoch 9/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.2381 - accuracy: 0.9189 - val_loss: 0.8096 - val_accuracy: 0.7647
+Epoch 10/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.1973 - accuracy: 0.9336 - val_loss: 0.7837 - val_accuracy: 0.7692
+Epoch 11/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.1489 - accuracy: 0.9487 - val_loss: 0.9046 - val_accuracy: 0.7632
+Epoch 12/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.1163 - accuracy: 0.9610 - val_loss: 0.8560 - val_accuracy: 0.7847
+Epoch 13/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.1070 - accuracy: 0.9647 - val_loss: 0.9887 - val_accuracy: 0.7725
+Epoch 14/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.1056 - accuracy: 0.9651 - val_loss: 0.8903 - val_accuracy: 0.7905
+Epoch 15/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0819 - accuracy: 0.9715 - val_loss: 1.0197 - val_accuracy: 0.7680
+Epoch 16/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0958 - accuracy: 0.9672 - val_loss: 1.2456 - val_accuracy: 0.7340
+Epoch 17/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0787 - accuracy: 0.9726 - val_loss: 1.0524 - val_accuracy: 0.7902
+Epoch 18/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0685 - accuracy: 0.9779 - val_loss: 1.0943 - val_accuracy: 0.7753
+Epoch 19/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0623 - accuracy: 0.9791 - val_loss: 1.2770 - val_accuracy: 0.7565
+Epoch 20/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0507 - accuracy: 0.9838 - val_loss: 1.2186 - val_accuracy: 0.7810
+Epoch 21/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0515 - accuracy: 0.9821 - val_loss: 1.1056 - val_accuracy: 0.7815
+Epoch 22/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0492 - accuracy: 0.9830 - val_loss: 1.2721 - val_accuracy: 0.7530
+Epoch 23/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0544 - accuracy: 0.9829 - val_loss: 1.3051 - val_accuracy: 0.7680
+Epoch 24/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0436 - accuracy: 0.9859 - val_loss: 1.7655 - val_accuracy: 0.6477
+Epoch 25/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0483 - accuracy: 0.9829 - val_loss: 1.2233 - val_accuracy: 0.7838
+Epoch 26/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0481 - accuracy: 0.9838 - val_loss: 1.1938 - val_accuracy: 0.7807
+Epoch 27/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0369 - accuracy: 0.9879 - val_loss: 1.2160 - val_accuracy: 0.7657
+Epoch 28/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0366 - accuracy: 0.9883 - val_loss: 1.3273 - val_accuracy: 0.7593
+Epoch 29/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0494 - accuracy: 0.9836 - val_loss: 1.2793 - val_accuracy: 0.7818
+Epoch 30/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0365 - accuracy: 0.9867 - val_loss: 1.2615 - val_accuracy: 0.7578
+Epoch 31/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0339 - accuracy: 0.9880 - val_loss: 1.3950 - val_accuracy: 0.7643
+Epoch 32/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0422 - accuracy: 0.9869 - val_loss: 1.2355 - val_accuracy: 0.7795
+Epoch 33/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0362 - accuracy: 0.9876 - val_loss: 1.1940 - val_accuracy: 0.7867
+Epoch 34/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0384 - accuracy: 0.9867 - val_loss: 1.2417 - val_accuracy: 0.7685
+Epoch 35/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0332 - accuracy: 0.9888 - val_loss: 1.1575 - val_accuracy: 0.7872
+Epoch 36/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0440 - accuracy: 0.9871 - val_loss: 1.1410 - val_accuracy: 0.7992
+Epoch 37/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0199 - accuracy: 0.9936 - val_loss: 1.3271 - val_accuracy: 0.7830
+Epoch 38/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0314 - accuracy: 0.9894 - val_loss: 1.1963 - val_accuracy: 0.7967
+Epoch 39/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0273 - accuracy: 0.9910 - val_loss: 1.3453 - val_accuracy: 0.7748
+Epoch 40/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0306 - accuracy: 0.9903 - val_loss: 1.2532 - val_accuracy: 0.7965
+Epoch 41/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0277 - accuracy: 0.9908 - val_loss: 1.1801 - val_accuracy: 0.8010
+Epoch 42/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0199 - accuracy: 0.9933 - val_loss: 1.5717 - val_accuracy: 0.7653
+Epoch 43/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0468 - accuracy: 0.9845 - val_loss: 1.1252 - val_accuracy: 0.7970
+Epoch 44/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0182 - accuracy: 0.9940 - val_loss: 1.3703 - val_accuracy: 0.7888
+Epoch 45/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0205 - accuracy: 0.9936 - val_loss: 1.1997 - val_accuracy: 0.7997
+Epoch 46/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0254 - accuracy: 0.9907 - val_loss: 1.4264 - val_accuracy: 0.7858
+Epoch 47/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0140 - accuracy: 0.9958 - val_loss: 1.5667 - val_accuracy: 0.7758
+Epoch 48/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0335 - accuracy: 0.9895 - val_loss: 1.1860 - val_accuracy: 0.7997
+Epoch 49/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0178 - accuracy: 0.9947 - val_loss: 1.4296 - val_accuracy: 0.7792
+Epoch 50/50
+750/750 [==============================] - 14s 19ms/step - loss: 0.0307 - accuracy: 0.9896 - val_loss: 1.2001 - val_accuracy: 0.7962
+188/188 [==============================] - 1s 6ms/step - loss: 1.2084 - accuracy: 0.7948
+
+Test loss: 1.2084389925003052
+
+Test accuracy: 0.7948333621025085
+</pre></div></div>
+</div>
+<p>###Further tune the model As shown above, with the current CNN netwrok structure, the accuracy of the training set is 99.0% and the accuracy of the testing set is 79.5%. Since the accuracy difference between the training and testing set is over 20%, the model faces an overfitting issue. In order to solve the issue, meanwhile further increase accuracy of the model, the following hypermaters have been changed and tested with different values. The values which provide the best accuracy are shown
+below.</p>
+<ol class="arabic simple">
+<li><p>Regularization: 1e-4</p></li>
+</ol>
+<p>As shown below, the model achieves the highest training and testing accuracy when the regularization is 1e-4. Therefore, the value has been selected.</p>
+<p>0.1: training: 0.7356, testing: 0.5785;</p>
+<p>0.01: training: 0.8777, testing: 0.7218;</p>
+<p>1e-3: training: 0.9521, testing: 0.7667;</p>
+<p>1e-4: training: 0.9809, testing: 0.7845;</p>
+<p>1e-5: training: 0.9877, testing: 0.7779;</p>
+<ol class="arabic simple" start="2">
+<li><p>Dropout rate: (0.4,0.4,0.5) for the convolution layer, 0.5 for the fully connected layer.</p></li>
+</ol>
+<p>In order to select the best combination of the dropout rate, the dropout rate (0.2,0.3,0.4,0.5) has been firstly applied to the convolution and fully connected layer. It was found that the accuracy of the training set is 0.9504, and the accuracy for the testing set is 0.8468. Since there is still a huge difference between the training and testing set, the minimum dropout rate for each layer was set as 0.3. Then the following combinations have been tested.</p>
+<p>(0.3,0.4,0.5,0.5): trainig set: 0.9526; testing set: 0.8482</p>
+<p>(0.4,0.3,0.4,0.5): trainig set: 0.9490; testing set: 0.8463</p>
+<p>(0.4,0.4,0.5,0.5): trainig set: 0.9243; testing set: 0.8548</p>
+<p>(0.4,0.5,0.5,0.5): trainig set: 0.9140; testing set: 0.8326</p>
+<p>(0.5,0.5,0.5,0.5): trainig set: 0.9030; testing set: 0.8507</p>
+<p>Since under the combination (0.4,0.4,0.5,0.5) 1. accuracy for the testing set is the highest, 2. accuracy difference between the training and testing set is the lowest. Therefore, the dropout rate combination has been selected.</p>
+<ol class="arabic simple" start="3">
+<li><p>Learning rate: 1e-3</p></li>
+</ol>
+<p>To select the suitable learning rate, the following learning rates have been tested. However, as shown below, when the learning rate is at the deafult value - 0.001, the model provides the highest accuracy. Therefore, the learning rate remain unchanged.</p>
+<p>0.1: trainig set: 0.1728, testing set: 0.167;</p>
+<p>0.01: trainig set: 0.5690, testing set: 0.523;</p>
+<p>1e-3: trainig set: 0.9243; testing set: 0.8548;</p>
+<p>1e-4: trainig set: 0.9818; testing set: 0.8493;</p>
+<ol class="arabic simple" start="4">
+<li><p>Mini-batch size (training set): 32</p></li>
+</ol>
+<p>The following batch sizes for the training set has been tested. According to the result, increase the batch size does not imporve the model; therefore, the batch size remain unchanged.</p>
+<p>32: trainig set: 0.9243; testing set: 0.8548;</p>
+<p>64: trainig set: 0.9464; testing set: 0.8470;</p>
+<p>128: trainig set: 0.9695; testing set: 0.8157;</p>
+<p>256: trainig set: 0.9746; testing set: 0.8297;</p>
+<ol class="arabic simple" start="5">
+<li><p>Batch size (testing set): 32</p></li>
+</ol>
+<p>It was found that changing the batch size of the testing set does not affect accuracy of the model; therefore, the batch size for the testing set remains unchanged.</p>
+<ol class="arabic simple" start="5">
+<li><p>Number of epoch: 200</p></li>
+</ol>
+<p>Upon ploting the change of the accuracy and loss of the training set and validation set, it was found that, when the number of epoch was set as 50 and 100, the loss for both the trainig set and the testing set can be further imporved, as shown in the figure below.</p>
+<img alt="image.png" src="data:image/png;base64,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" />
+<p>Therefore, the number of epoch was further increased to 200. As shown in the figure below, the decrease of the loss becomes less significant.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre><span></span>model = models.Sequential()
+weight_decay = 1e-4
+model.add(layers.Conv2D(64, (3,3), activation=&#39;relu&#39;, padding=&#39;same&#39;, kernel_regularizer=regularizers.l2(weight_decay), input_shape=(32, 32, 3)))
+model.add(layers.BatchNormalization())
+model.add(layers.Conv2D(64, (3,3), activation=&#39;relu&#39;, padding=&#39;same&#39;, kernel_regularizer=regularizers.l2(weight_decay)))
+model.add(layers.BatchNormalization())
+model.add(layers.MaxPooling2D(pool_size=(2,2)))
+model.add(layers.Dropout(0.4))
+
+model.add(layers.Conv2D(256, (3,3), activation=&#39;relu&#39;, padding=&#39;same&#39;, kernel_regularizer=regularizers.l2(weight_decay)))
+model.add(layers.Activation(&#39;elu&#39;))
+model.add(layers.BatchNormalization())
+model.add(layers.Conv2D(256, (3,3), activation=&#39;relu&#39;, padding=&#39;same&#39;, kernel_regularizer=regularizers.l2(weight_decay)))
+model.add(layers.BatchNormalization())
+model.add(layers.MaxPooling2D(pool_size=(2,2)))
+model.add(layers.Dropout(0.4))
+
+model.add(layers.Conv2D(512, (3,3), padding=&#39;same&#39;, kernel_regularizer=regularizers.l2(weight_decay)))
+model.add(layers.Activation(&#39;elu&#39;))
+model.add(BatchNormalization())
+model.add(layers.Conv2D(512, (3,3), padding=&#39;same&#39;, kernel_regularizer=regularizers.l2(weight_decay)))
+model.add(layers.Activation(&#39;elu&#39;))
+model.add(layers.BatchNormalization())
+model.add(layers.MaxPooling2D(pool_size=(2,2)))
+model.add(layers.Dropout(0.5))
+model.add(layers.Flatten())
+model.add(layers.Dense(256, activation=&#39;relu&#39;))
+model.add(layers.Dropout(0.5))
+#model.add(layers.Dense(128, activation=&#39;relu&#39;))
+#model.add(layers.Dense(32, activation=&#39;relu&#39;))
+model.add(layers.Dense(10,activation=&#39;softmax&#39;))
+model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=1e-3),
+                loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
+                metrics=[&#39;accuracy&#39;])
+epochs=200
+batch=64
+history = model.fit(newtrain_images, newtrain_labels, epochs=epochs,
+                      validation_split=0.2, verbose=1)
+test_loss, test_acc = model.evaluate(newtest_images, newtest_labels,verbose=1)
+print(&#39;\nTest loss:&#39;, test_loss)
+print(&#39;\nTest accuracy:&#39;, test_acc)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Epoch 1/200
+750/750 [==============================] - 16s 20ms/step - loss: 2.5365 - accuracy: 0.3134 - val_loss: 1.7918 - val_accuracy: 0.3118
+Epoch 2/200
+750/750 [==============================] - 14s 19ms/step - loss: 1.5198 - accuracy: 0.4578 - val_loss: 2.0840 - val_accuracy: 0.3343
+Epoch 3/200
+750/750 [==============================] - 14s 19ms/step - loss: 1.3926 - accuracy: 0.5280 - val_loss: 1.3343 - val_accuracy: 0.5553
+Epoch 4/200
+750/750 [==============================] - 15s 19ms/step - loss: 1.2881 - accuracy: 0.5758 - val_loss: 1.2196 - val_accuracy: 0.6133
+Epoch 5/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.2425 - accuracy: 0.6150 - val_loss: 1.3047 - val_accuracy: 0.5903
+Epoch 6/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.2182 - accuracy: 0.6463 - val_loss: 1.2194 - val_accuracy: 0.6638
+Epoch 7/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.2564 - accuracy: 0.6649 - val_loss: 1.2991 - val_accuracy: 0.6758
+Epoch 8/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.2791 - accuracy: 0.6875 - val_loss: 1.2490 - val_accuracy: 0.7125
+Epoch 9/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.2775 - accuracy: 0.7150 - val_loss: 1.4069 - val_accuracy: 0.6862
+Epoch 10/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.3081 - accuracy: 0.7317 - val_loss: 1.3205 - val_accuracy: 0.7448
+Epoch 11/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.3540 - accuracy: 0.7364 - val_loss: 1.4601 - val_accuracy: 0.7237
+Epoch 12/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.3429 - accuracy: 0.7553 - val_loss: 1.4309 - val_accuracy: 0.7368
+Epoch 13/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.3293 - accuracy: 0.7697 - val_loss: 1.3028 - val_accuracy: 0.7843
+Epoch 14/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.3130 - accuracy: 0.7851 - val_loss: 1.3913 - val_accuracy: 0.7733
+Epoch 15/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.3446 - accuracy: 0.7938 - val_loss: 1.4710 - val_accuracy: 0.7645
+Epoch 16/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.3308 - accuracy: 0.8003 - val_loss: 1.4203 - val_accuracy: 0.7842
+Epoch 17/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.3428 - accuracy: 0.8063 - val_loss: 1.4601 - val_accuracy: 0.7863
+Epoch 18/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.3416 - accuracy: 0.8088 - val_loss: 1.3876 - val_accuracy: 0.8033
+Epoch 19/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.3389 - accuracy: 0.8224 - val_loss: 1.5811 - val_accuracy: 0.7722
+Epoch 20/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.3244 - accuracy: 0.8295 - val_loss: 1.6368 - val_accuracy: 0.7580
+Epoch 21/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.3242 - accuracy: 0.8354 - val_loss: 1.4411 - val_accuracy: 0.8032
+Epoch 22/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.2998 - accuracy: 0.8419 - val_loss: 1.9564 - val_accuracy: 0.6822
+Epoch 23/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.2924 - accuracy: 0.8440 - val_loss: 1.4776 - val_accuracy: 0.7988
+Epoch 24/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.2944 - accuracy: 0.8488 - val_loss: 1.5297 - val_accuracy: 0.7897
+Epoch 25/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.2888 - accuracy: 0.8538 - val_loss: 1.4774 - val_accuracy: 0.8118
+Epoch 26/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.2690 - accuracy: 0.8571 - val_loss: 1.5801 - val_accuracy: 0.7937
+Epoch 27/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.2845 - accuracy: 0.8532 - val_loss: 1.5920 - val_accuracy: 0.7867
+Epoch 28/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.2759 - accuracy: 0.8586 - val_loss: 1.6014 - val_accuracy: 0.7972
+Epoch 29/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.2378 - accuracy: 0.8671 - val_loss: 1.5833 - val_accuracy: 0.8060
+Epoch 30/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.2581 - accuracy: 0.8671 - val_loss: 1.4362 - val_accuracy: 0.8327
+Epoch 31/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.2524 - accuracy: 0.8695 - val_loss: 1.4811 - val_accuracy: 0.8100
+Epoch 32/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.2303 - accuracy: 0.8669 - val_loss: 1.4524 - val_accuracy: 0.8082
+Epoch 33/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.1843 - accuracy: 0.8828 - val_loss: 1.4667 - val_accuracy: 0.8168
+Epoch 34/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.1924 - accuracy: 0.8829 - val_loss: 1.4132 - val_accuracy: 0.8275
+Epoch 35/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.1942 - accuracy: 0.8786 - val_loss: 1.4152 - val_accuracy: 0.8275
+Epoch 36/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.1636 - accuracy: 0.8850 - val_loss: 1.3733 - val_accuracy: 0.8313
+Epoch 37/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.1637 - accuracy: 0.8870 - val_loss: 1.3708 - val_accuracy: 0.8235
+Epoch 38/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.1352 - accuracy: 0.8924 - val_loss: 1.4299 - val_accuracy: 0.8223
+Epoch 39/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.1152 - accuracy: 0.8945 - val_loss: 1.4012 - val_accuracy: 0.8267
+Epoch 40/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.1295 - accuracy: 0.8902 - val_loss: 1.4038 - val_accuracy: 0.8167
+Epoch 41/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.1139 - accuracy: 0.8945 - val_loss: 1.5407 - val_accuracy: 0.7932
+Epoch 42/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.0990 - accuracy: 0.8980 - val_loss: 1.3195 - val_accuracy: 0.8365
+Epoch 43/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.0861 - accuracy: 0.8967 - val_loss: 1.3878 - val_accuracy: 0.8248
+Epoch 44/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.0975 - accuracy: 0.8969 - val_loss: 1.3355 - val_accuracy: 0.8350
+Epoch 45/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.0756 - accuracy: 0.8999 - val_loss: 1.4530 - val_accuracy: 0.8148
+Epoch 46/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.0655 - accuracy: 0.8998 - val_loss: 1.3084 - val_accuracy: 0.8348
+Epoch 47/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.0576 - accuracy: 0.9006 - val_loss: 1.3071 - val_accuracy: 0.8423
+Epoch 48/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.0497 - accuracy: 0.9024 - val_loss: 1.2865 - val_accuracy: 0.8317
+Epoch 49/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.0492 - accuracy: 0.9029 - val_loss: 1.4125 - val_accuracy: 0.8165
+Epoch 50/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.0290 - accuracy: 0.9034 - val_loss: 1.3418 - val_accuracy: 0.8247
+Epoch 51/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.0236 - accuracy: 0.9061 - val_loss: 1.4153 - val_accuracy: 0.8173
+Epoch 52/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.0332 - accuracy: 0.9017 - val_loss: 1.3820 - val_accuracy: 0.8160
+Epoch 53/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.0065 - accuracy: 0.9090 - val_loss: 1.3308 - val_accuracy: 0.8325
+Epoch 54/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.0095 - accuracy: 0.9049 - val_loss: 1.4312 - val_accuracy: 0.8075
+Epoch 55/200
+750/750 [==============================] - 15s 20ms/step - loss: 1.0022 - accuracy: 0.9081 - val_loss: 1.3383 - val_accuracy: 0.8235
+Epoch 56/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.9940 - accuracy: 0.9073 - val_loss: 1.3973 - val_accuracy: 0.8283
+Epoch 57/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.9894 - accuracy: 0.9089 - val_loss: 1.3980 - val_accuracy: 0.8130
+Epoch 58/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.9839 - accuracy: 0.9109 - val_loss: 1.2809 - val_accuracy: 0.8367
+Epoch 59/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.9826 - accuracy: 0.9101 - val_loss: 1.2942 - val_accuracy: 0.8258
+Epoch 60/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.9658 - accuracy: 0.9111 - val_loss: 1.3285 - val_accuracy: 0.8245
+Epoch 61/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.9641 - accuracy: 0.9111 - val_loss: 1.2641 - val_accuracy: 0.8315
+Epoch 62/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.9592 - accuracy: 0.9148 - val_loss: 1.2342 - val_accuracy: 0.8427
+Epoch 63/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.9496 - accuracy: 0.9175 - val_loss: 1.3090 - val_accuracy: 0.8217
+Epoch 64/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.9565 - accuracy: 0.9130 - val_loss: 1.2091 - val_accuracy: 0.8425
+Epoch 65/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.9471 - accuracy: 0.9138 - val_loss: 1.2549 - val_accuracy: 0.8373
+Epoch 66/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.9346 - accuracy: 0.9190 - val_loss: 1.3121 - val_accuracy: 0.8128
+Epoch 67/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.9395 - accuracy: 0.9161 - val_loss: 1.3362 - val_accuracy: 0.8317
+Epoch 68/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.9368 - accuracy: 0.9179 - val_loss: 1.2794 - val_accuracy: 0.8212
+Epoch 69/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.9254 - accuracy: 0.9158 - val_loss: 1.2605 - val_accuracy: 0.8377
+Epoch 70/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.9217 - accuracy: 0.9167 - val_loss: 1.2572 - val_accuracy: 0.8387
+Epoch 71/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.9114 - accuracy: 0.9200 - val_loss: 1.2214 - val_accuracy: 0.8448
+Epoch 72/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.9230 - accuracy: 0.9170 - val_loss: 1.3003 - val_accuracy: 0.8272
+Epoch 73/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.9217 - accuracy: 0.9161 - val_loss: 1.2600 - val_accuracy: 0.8305
+Epoch 74/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.9017 - accuracy: 0.9210 - val_loss: 1.1547 - val_accuracy: 0.8465
+Epoch 75/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8989 - accuracy: 0.9223 - val_loss: 1.1665 - val_accuracy: 0.8492
+Epoch 76/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.9000 - accuracy: 0.9231 - val_loss: 1.2098 - val_accuracy: 0.8460
+Epoch 77/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8982 - accuracy: 0.9215 - val_loss: 1.1387 - val_accuracy: 0.8518
+Epoch 78/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8780 - accuracy: 0.9239 - val_loss: 1.2513 - val_accuracy: 0.8353
+Epoch 79/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.9083 - accuracy: 0.9222 - val_loss: 1.1979 - val_accuracy: 0.8460
+Epoch 80/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8855 - accuracy: 0.9264 - val_loss: 1.4316 - val_accuracy: 0.7940
+Epoch 81/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.9022 - accuracy: 0.9179 - val_loss: 1.2021 - val_accuracy: 0.8448
+Epoch 82/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8782 - accuracy: 0.9247 - val_loss: 1.1857 - val_accuracy: 0.8450
+Epoch 83/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8868 - accuracy: 0.9200 - val_loss: 1.2027 - val_accuracy: 0.8403
+Epoch 84/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8981 - accuracy: 0.9179 - val_loss: 1.1608 - val_accuracy: 0.8482
+Epoch 85/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8678 - accuracy: 0.9255 - val_loss: 1.3953 - val_accuracy: 0.8133
+Epoch 86/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8727 - accuracy: 0.9229 - val_loss: 1.1582 - val_accuracy: 0.8523
+Epoch 87/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8673 - accuracy: 0.9268 - val_loss: 1.2229 - val_accuracy: 0.8303
+Epoch 88/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8776 - accuracy: 0.9246 - val_loss: 1.2177 - val_accuracy: 0.8373
+Epoch 89/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8985 - accuracy: 0.9147 - val_loss: 1.2061 - val_accuracy: 0.8385
+Epoch 90/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8879 - accuracy: 0.9222 - val_loss: 1.2502 - val_accuracy: 0.8420
+Epoch 91/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8784 - accuracy: 0.9262 - val_loss: 1.2614 - val_accuracy: 0.8400
+Epoch 92/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8719 - accuracy: 0.9255 - val_loss: 1.2399 - val_accuracy: 0.8360
+Epoch 93/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8660 - accuracy: 0.9296 - val_loss: 1.2222 - val_accuracy: 0.8462
+Epoch 94/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8692 - accuracy: 0.9248 - val_loss: 1.1984 - val_accuracy: 0.8395
+Epoch 95/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8772 - accuracy: 0.9206 - val_loss: 1.2099 - val_accuracy: 0.8413
+Epoch 96/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8685 - accuracy: 0.9233 - val_loss: 1.1673 - val_accuracy: 0.8493
+Epoch 97/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8473 - accuracy: 0.9311 - val_loss: 1.2283 - val_accuracy: 0.8320
+Epoch 98/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8613 - accuracy: 0.9242 - val_loss: 1.1661 - val_accuracy: 0.8480
+Epoch 99/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8636 - accuracy: 0.9240 - val_loss: 1.1687 - val_accuracy: 0.8470
+Epoch 100/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8571 - accuracy: 0.9258 - val_loss: 1.1448 - val_accuracy: 0.8415
+Epoch 101/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8486 - accuracy: 0.9279 - val_loss: 1.1433 - val_accuracy: 0.8560
+Epoch 102/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8533 - accuracy: 0.9275 - val_loss: 1.1981 - val_accuracy: 0.8457
+Epoch 103/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8499 - accuracy: 0.9249 - val_loss: 1.2030 - val_accuracy: 0.8475
+Epoch 104/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8560 - accuracy: 0.9220 - val_loss: 1.2188 - val_accuracy: 0.8357
+Epoch 105/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8521 - accuracy: 0.9246 - val_loss: 1.1673 - val_accuracy: 0.8562
+Epoch 106/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8296 - accuracy: 0.9336 - val_loss: 1.2296 - val_accuracy: 0.8450
+Epoch 107/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8433 - accuracy: 0.9255 - val_loss: 1.3216 - val_accuracy: 0.8330
+Epoch 108/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8464 - accuracy: 0.9244 - val_loss: 1.1607 - val_accuracy: 0.8438
+Epoch 109/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8282 - accuracy: 0.9306 - val_loss: 1.2130 - val_accuracy: 0.8392
+Epoch 110/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8475 - accuracy: 0.9260 - val_loss: 1.1647 - val_accuracy: 0.8463
+Epoch 111/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8420 - accuracy: 0.9261 - val_loss: 1.1954 - val_accuracy: 0.8502
+Epoch 112/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8434 - accuracy: 0.9267 - val_loss: 1.1839 - val_accuracy: 0.8340
+Epoch 113/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8307 - accuracy: 0.9308 - val_loss: 1.3998 - val_accuracy: 0.7942
+Epoch 114/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8395 - accuracy: 0.9255 - val_loss: 1.2093 - val_accuracy: 0.8387
+Epoch 115/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8374 - accuracy: 0.9272 - val_loss: 1.1688 - val_accuracy: 0.8437
+Epoch 116/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8251 - accuracy: 0.9310 - val_loss: 1.2363 - val_accuracy: 0.8355
+Epoch 117/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8287 - accuracy: 0.9269 - val_loss: 1.1708 - val_accuracy: 0.8445
+Epoch 118/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8431 - accuracy: 0.9232 - val_loss: 1.1557 - val_accuracy: 0.8472
+Epoch 119/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8359 - accuracy: 0.9256 - val_loss: 1.1720 - val_accuracy: 0.8453
+Epoch 120/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8228 - accuracy: 0.9312 - val_loss: 1.2636 - val_accuracy: 0.8108
+Epoch 121/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8429 - accuracy: 0.9237 - val_loss: 1.1834 - val_accuracy: 0.8453
+Epoch 122/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8252 - accuracy: 0.9300 - val_loss: 1.1144 - val_accuracy: 0.8545
+Epoch 123/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8299 - accuracy: 0.9274 - val_loss: 1.1387 - val_accuracy: 0.8602
+Epoch 124/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8221 - accuracy: 0.9313 - val_loss: 1.2414 - val_accuracy: 0.8413
+Epoch 125/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8344 - accuracy: 0.9269 - val_loss: 1.3079 - val_accuracy: 0.8295
+Epoch 126/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8263 - accuracy: 0.9270 - val_loss: 1.1085 - val_accuracy: 0.8665
+Epoch 127/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8241 - accuracy: 0.9290 - val_loss: 1.1556 - val_accuracy: 0.8425
+Epoch 128/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8296 - accuracy: 0.9293 - val_loss: 1.1295 - val_accuracy: 0.8532
+Epoch 129/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8244 - accuracy: 0.9280 - val_loss: 1.1407 - val_accuracy: 0.8545
+Epoch 130/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8247 - accuracy: 0.9280 - val_loss: 1.1742 - val_accuracy: 0.8422
+Epoch 131/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8270 - accuracy: 0.9245 - val_loss: 1.1613 - val_accuracy: 0.8607
+Epoch 132/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8142 - accuracy: 0.9265 - val_loss: 1.1679 - val_accuracy: 0.8520
+Epoch 133/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8142 - accuracy: 0.9293 - val_loss: 1.1434 - val_accuracy: 0.8517
+Epoch 134/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8140 - accuracy: 0.9307 - val_loss: 1.1774 - val_accuracy: 0.8497
+Epoch 135/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8234 - accuracy: 0.9244 - val_loss: 1.1824 - val_accuracy: 0.8520
+Epoch 136/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8107 - accuracy: 0.9287 - val_loss: 1.1070 - val_accuracy: 0.8573
+Epoch 137/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8052 - accuracy: 0.9320 - val_loss: 1.0968 - val_accuracy: 0.8555
+Epoch 138/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8098 - accuracy: 0.9304 - val_loss: 1.2366 - val_accuracy: 0.8405
+Epoch 139/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8123 - accuracy: 0.9283 - val_loss: 1.1971 - val_accuracy: 0.8433
+Epoch 140/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8076 - accuracy: 0.9292 - val_loss: 1.0834 - val_accuracy: 0.8628
+Epoch 141/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8045 - accuracy: 0.9297 - val_loss: 1.1284 - val_accuracy: 0.8477
+Epoch 142/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8065 - accuracy: 0.9315 - val_loss: 1.0646 - val_accuracy: 0.8633
+Epoch 143/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8070 - accuracy: 0.9297 - val_loss: 1.2128 - val_accuracy: 0.8460
+Epoch 144/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8138 - accuracy: 0.9249 - val_loss: 1.2147 - val_accuracy: 0.8447
+Epoch 145/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8083 - accuracy: 0.9293 - val_loss: 1.0836 - val_accuracy: 0.8563
+Epoch 146/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8019 - accuracy: 0.9303 - val_loss: 1.2642 - val_accuracy: 0.8187
+Epoch 147/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7983 - accuracy: 0.9290 - val_loss: 1.1203 - val_accuracy: 0.8565
+Epoch 148/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8126 - accuracy: 0.9261 - val_loss: 1.1399 - val_accuracy: 0.8483
+Epoch 149/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7921 - accuracy: 0.9352 - val_loss: 1.2099 - val_accuracy: 0.8370
+Epoch 150/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8161 - accuracy: 0.9259 - val_loss: 1.1479 - val_accuracy: 0.8448
+Epoch 151/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8013 - accuracy: 0.9306 - val_loss: 1.0671 - val_accuracy: 0.8647
+Epoch 152/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7804 - accuracy: 0.9337 - val_loss: 1.0695 - val_accuracy: 0.8565
+Epoch 153/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7930 - accuracy: 0.9307 - val_loss: 1.1761 - val_accuracy: 0.8320
+Epoch 154/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7932 - accuracy: 0.9314 - val_loss: 1.1027 - val_accuracy: 0.8607
+Epoch 155/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7968 - accuracy: 0.9280 - val_loss: 1.1405 - val_accuracy: 0.8483
+Epoch 156/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7880 - accuracy: 0.9300 - val_loss: 1.0979 - val_accuracy: 0.8580
+Epoch 157/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8132 - accuracy: 0.9258 - val_loss: 1.1703 - val_accuracy: 0.8473
+Epoch 158/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7882 - accuracy: 0.9302 - val_loss: 1.0392 - val_accuracy: 0.8610
+Epoch 159/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7860 - accuracy: 0.9349 - val_loss: 1.1149 - val_accuracy: 0.8527
+Epoch 160/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.8075 - accuracy: 0.9269 - val_loss: 1.1148 - val_accuracy: 0.8428
+Epoch 161/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7991 - accuracy: 0.9269 - val_loss: 1.2201 - val_accuracy: 0.8270
+Epoch 162/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7782 - accuracy: 0.9351 - val_loss: 1.0581 - val_accuracy: 0.8573
+Epoch 163/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7697 - accuracy: 0.9336 - val_loss: 1.1364 - val_accuracy: 0.8530
+Epoch 164/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7937 - accuracy: 0.9318 - val_loss: 1.1910 - val_accuracy: 0.8452
+Epoch 165/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7878 - accuracy: 0.9280 - val_loss: 1.1306 - val_accuracy: 0.8462
+Epoch 166/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7869 - accuracy: 0.9264 - val_loss: 1.0911 - val_accuracy: 0.8610
+Epoch 167/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7876 - accuracy: 0.9289 - val_loss: 1.1046 - val_accuracy: 0.8558
+Epoch 168/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7883 - accuracy: 0.9287 - val_loss: 1.0917 - val_accuracy: 0.8590
+Epoch 169/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7821 - accuracy: 0.9290 - val_loss: 1.0756 - val_accuracy: 0.8553
+Epoch 170/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7768 - accuracy: 0.9352 - val_loss: 1.0726 - val_accuracy: 0.8553
+Epoch 171/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7852 - accuracy: 0.9329 - val_loss: 1.1146 - val_accuracy: 0.8553
+Epoch 172/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7732 - accuracy: 0.9351 - val_loss: 1.1648 - val_accuracy: 0.8370
+Epoch 173/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7897 - accuracy: 0.9307 - val_loss: 1.0596 - val_accuracy: 0.8527
+Epoch 174/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7834 - accuracy: 0.9309 - val_loss: 1.1168 - val_accuracy: 0.8453
+Epoch 175/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7707 - accuracy: 0.9341 - val_loss: 1.1450 - val_accuracy: 0.8510
+Epoch 176/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7858 - accuracy: 0.9314 - val_loss: 1.1383 - val_accuracy: 0.8425
+Epoch 177/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7845 - accuracy: 0.9287 - val_loss: 1.0914 - val_accuracy: 0.8578
+Epoch 178/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7645 - accuracy: 0.9351 - val_loss: 1.1046 - val_accuracy: 0.8598
+Epoch 179/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7800 - accuracy: 0.9315 - val_loss: 1.0761 - val_accuracy: 0.8563
+Epoch 180/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7736 - accuracy: 0.9335 - val_loss: 1.0838 - val_accuracy: 0.8560
+Epoch 181/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7902 - accuracy: 0.9291 - val_loss: 1.1610 - val_accuracy: 0.8465
+Epoch 182/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7791 - accuracy: 0.9303 - val_loss: 1.0750 - val_accuracy: 0.8542
+Epoch 183/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7665 - accuracy: 0.9358 - val_loss: 1.2867 - val_accuracy: 0.8177
+Epoch 184/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7764 - accuracy: 0.9298 - val_loss: 1.0786 - val_accuracy: 0.8573
+Epoch 185/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7728 - accuracy: 0.9302 - val_loss: 1.0790 - val_accuracy: 0.8482
+Epoch 186/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7624 - accuracy: 0.9349 - val_loss: 1.0825 - val_accuracy: 0.8568
+Epoch 187/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7745 - accuracy: 0.9286 - val_loss: 1.1125 - val_accuracy: 0.8428
+Epoch 188/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7619 - accuracy: 0.9333 - val_loss: 1.0890 - val_accuracy: 0.8562
+Epoch 189/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7766 - accuracy: 0.9308 - val_loss: 1.1175 - val_accuracy: 0.8577
+Epoch 190/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7681 - accuracy: 0.9319 - val_loss: 1.1533 - val_accuracy: 0.8542
+Epoch 191/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7712 - accuracy: 0.9306 - val_loss: 1.0828 - val_accuracy: 0.8522
+Epoch 192/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7529 - accuracy: 0.9364 - val_loss: 1.0811 - val_accuracy: 0.8642
+Epoch 193/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7744 - accuracy: 0.9264 - val_loss: 1.0183 - val_accuracy: 0.8603
+Epoch 194/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7683 - accuracy: 0.9281 - val_loss: 1.1741 - val_accuracy: 0.8418
+Epoch 195/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7526 - accuracy: 0.9334 - val_loss: 1.0802 - val_accuracy: 0.8468
+Epoch 196/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7751 - accuracy: 0.9259 - val_loss: 1.0588 - val_accuracy: 0.8612
+Epoch 197/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7541 - accuracy: 0.9316 - val_loss: 1.1303 - val_accuracy: 0.8403
+Epoch 198/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7490 - accuracy: 0.9364 - val_loss: 1.0675 - val_accuracy: 0.8563
+Epoch 199/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7640 - accuracy: 0.9301 - val_loss: 1.1140 - val_accuracy: 0.8543
+Epoch 200/200
+750/750 [==============================] - 15s 20ms/step - loss: 0.7688 - accuracy: 0.9295 - val_loss: 1.1404 - val_accuracy: 0.8537
+188/188 [==============================] - 1s 6ms/step - loss: 1.1286 - accuracy: 0.8575
+
+Test loss: 1.1286121606826782
+
+Test accuracy: 0.8575000166893005
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre><span></span>acc = history.history[&#39;accuracy&#39;]
+val_acc = history.history[&#39;val_accuracy&#39;]
+
+loss = history.history[&#39;loss&#39;]
+val_loss = history.history[&#39;val_loss&#39;]
+
+epochs_range = range(epochs)
+
+plt.figure(figsize=(8, 8))
+plt.subplot(1, 2, 1)
+plt.plot(epochs_range, acc, label=&#39;Training Accuracy&#39;)
+plt.plot(epochs_range, val_acc, label=&#39;Validation Accuracy&#39;)
+plt.legend(loc=&#39;lower right&#39;)
+plt.title(&#39;Training and Validation Accuracy&#39;)
+
+plt.subplot(1, 2, 2)
+plt.plot(epochs_range, loss, label=&#39;Training Loss&#39;)
+plt.plot(epochs_range, val_loss, label=&#39;Validation Loss&#39;)
+plt.legend(loc=&#39;upper right&#39;)
+plt.title(&#39;Training and Validation Loss&#39;)
+plt.show()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Ruonan_Li_001433201_Assignment_4_46_0.png" src="_images/Ruonan_Li_001433201_Assignment_4_46_0.png" />
+</div>
+</div>
+<p>##e. Model evaluation As shown above, the model is tuned by checking: 1. Accuracy of the testing set. 2. The change of the loss and accuracy of the training and testing set.</p>
+<p>The corresponding results for the model developed are shown below. The accuracy of the testing set is 85.75%. The accuracy on the training set is 92.95%. Accuracy of the model is not very high, it may due to the number of training data is not enough.</p>
+<p>Accuracy and loss for both the training and testing sets are shown in the figure above. The variances of all sets are in a small range; therefore, the model is reasonalbe.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre><span></span>test_loss, test_acc = model.evaluate(newtest_images, newtest_labels, verbose=1)
+print(&#39;\nTest loss:&#39;, test_loss)
+print(&#39;\nTest accuracy:&#39;, test_acc)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+188/188 [==============================] - 1s 6ms/step - loss: 1.1286 - accuracy: 0.8575
+
+Test loss: 1.1286121606826782
+
+Test accuracy: 0.8575000166893005
+</pre></div></div>
+</div>
+<p>##f. Model prediction To check performace of the model, as shown below, predictions on the testing set have been made. Here, the 35th image has been selected for prediction. The model indicates the image belongs to class 8 which is a graph for hourse. It matches to the real category of the data. Thus, the model built has a high accuracy.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre><span></span>class_names = [&#39;airplane&#39;, &#39;automobile&#39;, &#39;bird&#39;, &#39;cat&#39;,
+               &#39;deer&#39;,&#39;dog&#39;, &#39;frog&#39;, &#39;horse&#39;,
+               &#39;ship&#39;, &#39;truck&#39;]
+predictions = model.predict(newtest_images)
+predictions[35]
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+array([0.0000000e+00, 0.0000000e+00, 6.6111515e-13, 1.5677483e-13,
+       2.7777010e-06, 4.6553675e-10, 2.3232001e-16, 9.9999726e-01,
+       0.0000000e+00, 0.0000000e+00], dtype=float32)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-none notranslate"><div class="highlight"><pre><span></span>plt.xticks([])
+plt.yticks([])
+plt.grid(False)
+plt.imshow(newtest_images[35], cmap=plt.cm.binary)
+plt.xlabel(class_names[newtest_labels[35][0]])
+plt.show()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/Ruonan_Li_001433201_Assignment_4_51_0.png" src="_images/Ruonan_Li_001433201_Assignment_4_51_0.png" />
+</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Function.html" class="btn btn-neutral float-left" title="Defined_function" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Ruonan Li.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

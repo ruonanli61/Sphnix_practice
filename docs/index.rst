@@ -51,6 +51,14 @@ Add an image below
 
    subpage2
 
+.. toctree::
+   :maxdepth: 3
+   :caption: Automatic API Doc Generation
+
+   Class
+   Function
+   Ruonan_Li_001433201_Assignment_4
+
 
 
 Indices and tables
